@@ -1,0 +1,32 @@
+{% if cities %}
+{% load static %}
+<!-- css file -->
+<link href="{% static "weather_app/main.css" %}">
+
+<style>
+ul {
+    list-style-type: none;
+  }
+a:link    { color: white; }
+a:visited { color: white; text-decoration: none; }
+a:hover   { color: orange; text-decoration: none; }
+a:active  { color: white; text-decoration: none; } 
+</style>
+
+<div class="d-flex">
+    <ul style="padding-left: 0;">
+        {% for city in cities %}
+            {% if forloop.counter < 5%}
+            <li>
+            <a class="suggestions_text" href="{% url 'weather' city.city_id %}">{{ city.name }}, {{ city.country }}</a>
+            </li>
+            {% else%}
+            <li hidden>{{ city.name }}, {{ city.country }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+{% else %}
+    <p>No cities with that name found.</p>
+{% endif %}

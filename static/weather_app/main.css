@@ -1,0 +1,100 @@
+body {
+    background-image: url("pattern.svg");
+    background-color: #cccccc;
+   }
+
+@font-face {
+  font-family: 'inter-thin';
+  src: url('Inter-Thin.ttf') format('TrueType');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter-bold';
+  src: url('Inter-Bold.ttf') format('TrueType');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter-medium';
+  src: url('Inter-Medium.ttf') format('TrueType');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cities_text{
+
+  font-family: 'inter-thin' !important; 
+  font-style: normal !important;
+  font-weight: 900 !important;
+  font-size: 36px !important;
+  line-height: 39px !important;
+
+
+  color: #ffffff !important;
+}
+
+.suggestions_text{
+
+  font-family: 'inter-thin' !important; 
+  font-style: thin !important;
+  font-weight: 900 !important;
+  font-size: 20px !important;
+  line-height: 38px !important;
+
+
+  color: #ffffff !important;
+}
+
+.results_text{
+
+  font-family: 'inter-thin' !important; 
+  font-style: thin !important;
+  font-weight: 900 !important;
+  font-size: 18px !important;
+  line-height: 40px !important;
+
+
+  color: #ffffff !important;
+}
+
+.nav_text{
+
+  font-family: 'inter-bold' !important; 
+  font-style: thin !important;
+  font-weight: 900 !important;
+  font-size: 24px !important;
+  line-height: 39px !important;
+
+
+  color: #ffffff !important;
+}
+
+.suggest_text{
+
+  font-family: 'inter-medium' !important; 
+  font-style: medium !important;
+  font-weight: 900 !important;
+  font-size: 18px !important;
+  line-height: 39px !important;
+
+
+  color: #ffffff !important;
+}
+
+.city_text {
+    position: relative;
+    top: 275px;
+  } 
+
+
+.search_box {
+    width: 50px;
+  }
+
+.navbar-custom {
+  background-color: #ed7652 !important;
+}
+  

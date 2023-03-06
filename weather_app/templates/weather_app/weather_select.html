@@ -1,0 +1,61 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>weather search</title>
+  <meta charset="utf-8">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+  <!-- JQuery -->
+  <script src="{% static 'javascript/jquery-3.6.3.min.js' %}"></script>
+
+  <!-- css file -->
+  <link href="{% static "weather_app/main.css" %}"rel="stylesheet">
+</head>
+<style>
+  body {
+    background-image: none;
+    }
+  ul {
+    list-style-type: none;
+    }
+  .text {
+    color: #000000 !important;
+    font-size: 26px !important;
+  }
+  a:link    { color: black; }
+  a:visited { color: white; text-decoration: none; }
+  a:hover   { color: orange; text-decoration: none; }
+  a:active  { color: white; text-decoration: none; } 
+</style>
+
+<body>
+<!-- bootstrap again -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+{% include 'navbar.html' %}
+  <div class="container">
+    <div class="row p-2">
+    </div>
+    <div class="row p-5">
+      <div class="col">
+        <div class="col text-center ">
+          <img src="{% static 'weather_app/weather-icons/' %}{{weather.icon}}.svg" class="image-fluid pb-4" style="width:125px;height:125px;" alt="Image"/>
+          <p class="suggestions_text text pb-4">{{ weather.date }}</p>
+          <p class="suggestions_text text">{{ weather.city }}</p>
+          <p class="suggestions_text text"> {{ weather.description }}</p>
+          <p class="suggestions_text text">min temp: {{ weather.min_temp }}° F</p>
+          <p class="suggestions_text text">max temp: {{ weather.max_temp }}° F</p>
+          <p class="suggestions_text text">humidity: {{ weather.humidity }}</p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
