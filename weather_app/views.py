@@ -128,11 +128,6 @@ def cities_view(request):
     
     return render(request, "cities.html", context=ctx)
 
-# not needed
-def test(request):
-    city=City.objects.all()
-    return render(request,'test.html',{'city':city})
-
 # view for rendering the search results page.
 # filters through the database and returns a list of cities with similar names
 class SearchResultsView(ListView):
